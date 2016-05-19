@@ -10,7 +10,7 @@
     4.2 如果package是在github上，则在console中输入install_github("package name")命令
   
 # R Data Analysis
-## 1.完整的数据分析流程
+## 1.数据分析流程
     1.1 定义探究问题
     1.2 第一理想的数据集
     1.3 确定能够获取的数据
