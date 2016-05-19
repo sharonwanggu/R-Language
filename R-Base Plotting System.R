@@ -68,5 +68,5 @@ hist(airquality$Wind)
 # 若想恢复原来的1行1列
 # 要在画图前设置全局参数
 par(mfrow = c(1, 1))
-boxplot(airquality$Ozone)
+boxplot(Ozone ~ Month, airquality, xlab = "Month", ylab = "Ozne", main = "Ozone in NYC")
 
