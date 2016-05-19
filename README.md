@@ -20,7 +20,7 @@
     1.7 统计分析／建模（机器学习）
     1.8 解析／交流结果（数据可视化）
     1.9 挑战结果（有没有其他的可能性？）
-    2.0 书写报告（Reproducible原则）
+    1.10 书写报告（Reproducible原则）
 
 ## 2.数据基础
     观测（observation）、变量（variable）、数据矩阵（data matrix）
