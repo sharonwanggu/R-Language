@@ -1,4 +1,4 @@
-# R基础
+# R Tutor
 ###下载R：
   https://cran.r-project.org
 ###下载IDE RStudio：
