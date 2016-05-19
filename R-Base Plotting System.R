@@ -53,4 +53,20 @@ abline(fit, lwd = 2)
 # legend(位置, 保持圆点的颜色一致，颜色，图例说明)
 legend("topright", pch = 1, col = c("red", "blue", "green"), legend = c("Sep", 'May', "Other"))
 
+# -------------------------------------------------------------------------------------------- #
+# 全局参数 par()
+par("bg") # background color defalut is white
+par("col") # default is black
+par("mar") # bottom, left, top, right
+par("mfrow") # default is 1row 1col 
+par("mfcol") # default is 1row 1col
+
+# 设置画板为1行2列
+par(mfrow = c(1, 1))
+hist(airquality$Temp)
+hist(airquality$Wind)
+# 若想恢复原来的1行1列
+# 要在画图前设置全局参数
+par(mfrow = c(1, 1))
+boxplot(airquality$Ozone)
 
