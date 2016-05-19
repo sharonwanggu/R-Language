@@ -1,6 +1,6 @@
 # R Tutor
 ## 1.下载R：
-    <https://cran.r-project.org>
+    https://cran.r-project.org
 ## 2.下载IDE RStudio：
     https://www.rstudio.com/products/rstudio/download/
 ## 3.下载R packages：  
