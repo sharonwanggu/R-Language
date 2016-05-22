@@ -78,9 +78,8 @@
 
 ## 3.R的三大绘图系统
         3.1 基本绘图系统（Base Plotting System）
-            3.1.1 绘图函数（graphics包）
-                plot
-                    plot()
+            3.2.1 绘图函数（graphics包）
+                • plot()
                     plot(x轴的变量, y轴的变量, ...)
                     重要参数：
                     xlab（x轴的labl）
@@ -92,22 +91,42 @@
                     col（颜色）
                     ?par
                     
-                    par() 用于设置全局参数（作用于R中的所有plot绘图）
+                • par() 用于设置全局参数（作用于R中的所有plot绘图）
                     bg（背景颜色）
                     mar（图表距离画板的边距）
                     las（文字的排版：横排、竖排）
                     mfrow（把当前画板分成几行几列，并且按照行的方式填充）
                     mfcol（把当前画板分成几行几列，并且按照列的方式填充）
                     这些参数可以在每次plot前修改
-                hist（柱状图）
-                boxplot（箱图）
-                points（点图）
-                lines（线图）
-                text（在图表指定位置添加文字）
-                title（给图表命名）
-                axis（添加坐标轴）
-            －调用函数会启用一个图形设备（如果没有正在运行的图形设备），并在设备上绘图
+                • hist()（柱状图）
+                • boxplot()（箱图）
+                • points()（点图）
+                • lines()（线图）
+                • text()（在图表指定位置添加文字）
+                • title()（给图表命名）
+                • axis()（添加坐标轴）
+            3.2.2 调用函数会启用一个图形设备（如果没有正在运行的图形设备），并在设备上绘图
             
         3.2 Lattice绘图系统（Lattice Plotting System）
+            3.2.1 绘图函数
+                - lattice包
+                    • xyplot()，适合画散点图
+                        xyplot(因变量y ~ 自变量x | 分类变量f * g, 数据集)
+                    • bwplot() 
+                    • histogram() 柱状图
+                    • stripplot()
+                    • dotplot() 点图
+                    • splom() 
+                    • levelplot()
+                    • contourplot()
+                    • panel()，用于控制每个面板内的绘图
+                - grid包
+                    • 实现了独立于base的绘图系统
+                    • lattice包基于grid创建的，很少直接从grid包调用函数
+            3.2.2 Lattice于Base的重要区别
+                - Base绘图函数直接在图形设备上绘图
+                - Lattice绘图函数返回trellis类对象
+                    • 打印函数真正执行了在设备上绘图
+                    • 命令执行时，trellis类对象会被自动打印，所以看起来就像是lattice函数直接完成了绘图
         
         3.3 ggplot2绘图系统（ggplot2 Plotting System）
