@@ -51,7 +51,7 @@
             － 值域（range：max－min）、方差（variance）、标准差（standard variance）、四分位距（interquartile range）
                         1 9 2 8 3 9 4 5 7 6
             • 值域＝最大值－最小值＝8
-            • 方差＝（（每个数－平均值）的平方，相加）／个数减1＝8.27
+            • 方差
             • 标准差＝方差开方＝2.88
             • 四分位距
         2.3.3 稳健统计量（robust statistics）
