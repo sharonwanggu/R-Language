@@ -131,3 +131,16 @@
                     • 命令执行时，trellis类对象会被自动打印，所以看起来就像是lattice函数直接完成了绘图
         
         3.3 ggplot2绘图系统（ggplot2 Plotting System）
+            3.3.1 层（Layer）
+                | Tables        | Are           | Cool  |
+                | ------------- |:-------------:| -----:|
+                | col 3 is      | right-aligned | $1600 |
+                | col 2 is      | centered      |   $12 |
+                | zebra stripes | are neat      |    $1 |
+            3.2.2 绘图函数
+                - qplot()
+                    • 类似于Base系统的plot()，参数包含aesthetics／geom／facet...
+                    • 隐藏了绘图实现的细节（灵活性欠佳）
+                - ggplot()
+                    • 是核心，可以实现qplot()无法实现的功能
+                    • 调用ggplot()本身并不能实现绘图，要在其基础上添加层（如gem_point()）才可以
