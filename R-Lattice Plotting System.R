@@ -37,7 +37,7 @@ x <- rnorm(100)
 # 0和1各占50个
 f <- rep(0:1, each = 50)
 y <- x + f - f * x + rnorm(100, sd = 0.5)
-f <- factor(f, labels = c("Group1, Group2"))
+f <- factor(f, labels = c("Group1", "Group2"))
 xyplot(y ~ x | f, layout = c(2, 1))
 
  # 自定义面板风格
