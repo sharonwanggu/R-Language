@@ -202,3 +202,31 @@
     - 用于绘图的数据量的大小（向量格式 vs. 位图 ）
     - 是否需要动态调整图的大小（向量格式 vs. 位图 ）
     - 用哪个绘图系统（Base／Lattice／ggplot2 ？）一般三者不混用
+
+**3.6 探索性数据分析**  
+  - 目的  
+    - 了解数据特征、找到数据中的模式、形成分析策略  
+    - 图与数字互相验证、帮助发现错误、用于交流结果  
+  - 特点  
+    - 快速、通常呈现在屏幕设备  
+    - 不需要过分注重图是否漂亮  
+  - 分析性作图的六大原则  
+    - 凸显比较（谁和谁比）  
+    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-Plotting-Prin1.png)
+    - 凸显机制（因果／机制／解释）  
+    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-Plotting-Prin2.png)
+    - 凸显多元性（>2个变量、逃离扁平）  
+    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-Plotting-Prin3.png)
+    - 整合证据  
+      - 整合文字、数字、图、表等  
+      - 用多种方式显示数据的特征  
+      - 不要让工具主宰分析  
+    - 使用适当的图标、尺度等  
+      - 完备性、一图胜前言  
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-Plotting-Prin5.png)
+    - 内容是王道  
+      - 研究问题的重要性 > 作图漂亮  
+  - 获取帮助  
+    - 如何问问题  
+      - 操作系统、版本、哪一步产生错误、预期是什么、得到的结果是什么、其他有用的信息  
+    - Google  
