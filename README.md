@@ -136,3 +136,16 @@
           - 是核心，可以实现qplot()无法实现的功能  
           - 调用ggplot()本身并不能实现绘图，要在其基础上添加层（如gem_point()）才可以
 
+**3.4 R语言绘图之颜色**  
+  - grDevices包  
+    - colorRamp() & colorRampPalette()  
+    - 颜色的名字可使用colors()获取
+  - RColorBrewer包  
+    - 三类调色板  
+      - sequential：从一个极端到另一个极端慢慢过渡，适合呈现顺序数据  
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/RColorBrewer-Sequential.png)
+      - diverging：两级取值颜色比较明显，适合呈现处于极端的数据  
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/RColorBrewer-Diverging.png)
+      - qualitative：于前两类调色板对比，不存在特别淡的颜色，颜色之间的对比较鲜明，适合呈现分类变量之间的差异和对比
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/RColorBrewer-Qualitative.png)
+    - 调色板信息可与colorRamp／colorRampPalette结合使用  
