@@ -149,3 +149,26 @@
       - qualitative：于前两类调色板对比，不存在特别淡的颜色，颜色之间的对比较鲜明，适合呈现分类变量之间的差异和对比
       ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/RColorBrewer-Qualitative.png)
     - 调色板信息可与colorRamp／colorRampPalette结合使用  
+
+**3.5 R支持的图形设备**  
+  - 什么是图形设备  
+    - 屏幕设备（探索性分析常用）：电脑屏幕  
+      - windows() on Windows  
+      - quartz() on Mac  
+      - xll() on Unix or Linux  
+    - 文件设备（打印／文章用图常用）  
+      - 向量格式（vector format）：PDF，适于存储线条图  
+      - 位图（bitmap format）：PNG／JPEG／TIFF／BMP，适于呈现大量数据  
+    - grDevices包  
+      - 包含了实现各种图形设备的代码  
+      - ?Devices：查看可用的各种图形设备  
+  - 生成图形的两种途径  
+    - 调用绘图函数（默认使用屏幕）-> 屏幕设备显示图形 -> 进一步修饰图形  
+    - 明确指定图形设备 -> 调用绘图函数（如果制定的是文件设备则无法在屏幕上看到图形）-> 进一步修饰图形 -> 关闭图形设备dev.off()  
+    - 可同时打开多个设备，但一次只能在一个设备上绘图    
+    - dev.cur() 获取但前活跃的设备  
+    - dev.set() 将设备指定为活跃的设备  
+  - 拷贝图形  
+    - 多个设备之间的互相拷贝：dev.copy  
+      - 拷贝到PDF文件：dev.copy2pdf()  
+      - 注意：拷贝的结果可能于原图有出入，因为其拷贝过程并不是一一对应的过程  
