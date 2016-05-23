@@ -4,7 +4,7 @@
 # 柱状图 hist
 # 查看风速的hist
 # xlab = x轴坐标的label
-hist(airquality$Wind, xlab = "Wind")
+hist(airquality$Wind, xlab = "Wind", main = "Wind and Temp in NYC")
 
 # -------------------------------------------------------------------------------------------- #
 # 箱图 boxplot
