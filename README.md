@@ -74,7 +74,7 @@
   - 一个分类、一个数值变量的关系  
       - 并排箱图（side-by-side box plot）
 
-## 3.R的三大绘图系统  
+## 3.R的绘图系统  
 **3.1 基本绘图系统（Base Plotting System）**  
   - 绘图函数（graphics包）  
       - plot()  
