@@ -182,5 +182,14 @@
     - dev.set() 将设备指定为活跃的设备  
   - 拷贝图形  
     - 多个设备之间的互相拷贝：dev.copy  
+    ``` R
+    # 将当前屏幕设备上的图
+    # copy到png格式的文件中
+    with(airquality, plot(Wind, Temp, main = "Wind and Temp in NYC"))
+    # dev.copy(图片格式，文件名)
+    dev.copy(png, file = "myCopy.png")
+    # 关闭设备
+    dev.off()
+    ```
       - 拷贝到PDF文件：dev.copy2pdf()  
       - 注意：拷贝的结果可能于原图有出入，因为其拷贝过程并不是一一对应的过程  
