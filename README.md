@@ -96,8 +96,11 @@
           mfcol（把当前画板分成几行几列，并且按照列的方式填充）  
           这些参数可以在每次plot前修改  
       - hist()（柱状图）  
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-hist.png)
       - boxplot()（箱图）  
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-boxplot.png)
       - points()（点图）  
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-points.png)
       - lines()（线图）  
       - text()（在图表指定位置添加文字）  
       - title()（给图表命名）  
