@@ -131,6 +131,16 @@
 
 **3.3 ggplot2绘图系统（ggplot2 Plotting System）**  
   - 层（Layer）  
+
+| Layer                       | Description                                                                      |
+| :-----------                | :----------                                                                      |
+| Data（数据层）              | 需要分析的数据集（data frame）                                                   |  
+| Aesthetics（美学属性层）    | x-axis／y-axis／color／fill／size／labels／alpha／shape／liner width／liner type |  
+| Geometries（几何课题层）    | point／line／histogram／bar／boxplot                                             |  
+| Facets（绘图面板）          | columns／rows（绘图画板分为多少行，多行）                                        |  
+| Statistics（统计层）        | binning／smoothing／descriptive／inferential                                     |  
+| Coordinates（坐标系）       |cartesian／fixed／polar／limits                                                   |  
+| Themes（主题）              |non-data ink                                                                      | 
   - 绘图函数  
       - qplot()  
           - 类似于Base系统的plot()，参数包含aesthetics／geom／facet...  
