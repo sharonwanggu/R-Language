@@ -1,7 +1,7 @@
 # R Tutor  
 ## 1.R Resources  
-1.1 下载[R](https://cran.r-project.org)  
-1.2.下载[IDE RStudio](https://www.rstudio.com/products/rstudio/download/)   
+1.1 [R](https://cran.r-project.org)  
+1.2 [IDE RStudio](https://www.rstudio.com/products/rstudio/download/)   
 1.3 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)  
 
 ## 2.在RStudio中操作package:
