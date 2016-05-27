@@ -35,52 +35,154 @@
 | 数据库分析师             | 记录（record）     | 字段（field）    | 
 | 数据挖掘／机器学习研究者 | 示例（example）    | 属性（attribute）| 
 
-**2.1 变量类型：**  
-  - 数值（quantitative） 可以进行加减乘除求平均等运算  
-      - 连续 可在给定区间取任意数值（1-10的范围内，可以取1、1.1、1.2...无限个数字）  
-      - 离散 在给定的数值集合内取值（1-10的范围内，只能取1、2、3、4到10这10个数字）  
-  - 分类 （qualitative） 取值空间有限，不能进行运算  
-      - 无序：不可比较 （苹果、香蕉、梨）  
-      - 有序：顺序有意义 （大一、大二、大三）  
+数据集例子  
 
-**2.2 变量间的关系（对应不同的可视化方法和统计分析方法）**  
-  - 两个数值变量  
-  - 两个分类变量  
-  - 一个数值变量，一个分类变量  
+|  病人编号（PatientId）  |  入院时间（AdmDate）  |  年龄（Age）  |  糖尿病类型（Diabetes）  |  病情（Status）  |  
+|  :-----------           |  :----------          |  :----------  |  :----------             |  :----------     |  
+|  1001                   |  10/10/2016           |  21           |  Type1                   |  Poor            |  
+|  1002                   |  10/11/2016           |  32           |  Type2                   |  Excellent       |  
+|  1003                   |  10/12/2016           |  43           |  Type1                   |  Ailing          |  
+|  1004                   |  10/13/2016           |  54           |  Type1                   |  Improved        |  
+|  1005                   |  10/14/2016           |  65           |  Type2                   |  Poor            |
 
-**2.3 数值变量的特征和可视化**（🌰：1、9、2、8、3、9、4、5、7、6）  
-  - 数据集中趋势的测量（measures of center）   
-      - 均值（mean）、中位数字（median）、众数（mode）  
-          - 均值 ＝（1+9+2+8+3+9+4+5+7+6）／10 ＝ 5.4  
-          - 中位数 ＝ 排序后位于正中间的一个数 或 位于正中间的两个数的均值 ＝ 5.5  
-          - 众数 ＝ 出现次数最多的数＝9  
-  - 数据离散趋势的测量（）  
-      - 值域（range：max－min）、方差（variance）、标准差（standard variance）、四分位距（interquartile range）  
-          - 值域 ＝ 最大值－最小值 ＝ 8  
-          - 方差  
-          - 标准差 ＝ 方差开方 ＝ 2.88  
-          - 四分位距  
-  - 稳健统计量（robust statistics）  
-      - 是：中位数、四分位差（受极端值影响小）  
-      - 否：均值、标准差、值域（受极端值影响大）  
-  - 一个变量的可视化  
-      - 柱状图（histogram）  
-      - 点图（dot plot）（分布）  
-      - 箱图（box plot）（中位数、分位点、极端值）  
-  - 两个变量的关系  
-      - 散点图（scatter plot）：方向、形状、强度、极端值  
+**2.1 数据结构**  
+  - 向量（vector）  
+    - 向量是一个一维数组，用于存储数值型、字符型或逻辑型数据  
+    - 单个向量中的数据必须拥有相同的类型  
+    - 执行组合功能的函数c()可用来创建向量  
+``` R
+    numerical <- c(1001, 1002, 1003, 1004, 1005) # 数值型向量
+    string <- c("Poor", "Excellent", "Ailing", "Improved") # 字符型向量
+    logical <- c(TRUE, FALSE, FALSE, TRUE) # 逻辑型向量
 
-**2.4 分类变量的特征和可视化**  
-  - 一个分类变量的可视化  
-      - 频率表（frequency table）  
-      - 条形图（bar plot）  
-  - 两个分类变量的关系  
-      - 关联表（contingency table）  
-      - 相对频率表（relative frequencies）  
-      - 分段条形图、相对频率分段条形图  
-      - 马赛克图（mosaic plot）  
-  - 一个分类、一个数值变量的关系  
-      - 并排箱图（side-by-side box plot）
+    # 访问向量中的元素
+    # R中下标从1开始
+    numerical[2]
+    numerical[c(1, 3)]
+    numerical[c(1:4)]
+
+    # 标量
+    # 只含有一个元素的向量，用于保存常量
+    n <- 3
+    s <- "String"
+    l <- TRUE
+```  
+  - 矩阵（matrix）
+    - 矩阵是一个二维数组，但是每个元素的类型都必须一致
+``` R
+    cells <- c(1:4) # data
+    number_of_rows <- 2 
+    number_of_columns <- 2 
+    logical_value <- TRUE # 根据行填充（默认是FALSE）
+    char_vector_rownames <- c("row 1", "row 2") # 每行的labels
+    char_vector_colnames <- c("col 1", "col 2") # 每列的labels
+    # 通过函数matrix()创建矩阵
+    myMatrix <- matrix(cells, 
+                       nrow = number_of_rows, 
+                       ncol = number_of_columns, 
+                       byrow = logical_value, 
+                       dimnames = list(char_vector_rownames, char_vector_colnames))
+    # 矩阵下标的使用
+    myMatrix <- matrix(1:10, nrow = 2)
+    myMatrix[2,] # 第2行的所有元素
+    myMatrix[,1] # 第1列的所有元素
+    myMatrix[1,3] # 第1行的第3个
+    myMatrix[c(1,2), 2] # 第2列的第1，2个
+```  
+  - 数组（array）  
+    - 数组与矩阵相似，但是维度可以大于2
+``` R
+    cells <- 1:24
+    # 4行3列2组
+    dimensions <- c(4, 3, 2)
+    # 行的labels
+    dim1 <- c("row 1", "row 2", "row 3", "row 4")
+    # 列的lables
+    dim2 <- c("col 1", "col 2", "col 3")
+    # 组的labels
+    dim3 <- c("Section 1", "Section 2")
+    dimnames <- list(dim1, dim2, dim3)
+    # 数组通过array()创建
+    myArray <- array(cells, dimensions, dimnames)
+    # 数组下标的使用
+    myArray[1,1,1]
+```
+  - 数据框（data frame）  
+    - 类似于矩阵，但是不同的列可以包含不同的数据类型（数值型，字符型等）  
+    - 每一列的数据类型必须一致   
+``` R
+    patientID <- c(1001, 1002, 1003, 1004)
+    age <- c(21, 32, 43, 54)
+    diabetes <- c("Type1", "Type2", "Type1", "Type1")
+    status <- c("Poor", "Improved", "Excellent", "Poor")
+    # 利用data.frame()创建数据框
+    patientData <- data.frame(patientID, age, diabetes, status)
+    # 实例标志符（行的名称）
+    patientData <- data.frame(patientID, age, diabetes, status, row.names = patientID)
+    str(patientData)
+
+    # 获取数据框中的元素
+    patientData[1:2] # 返回前2列的数据
+    patientData[1,] 
+    patientData[c("patientID", "status")] # 直接指定列名
+    patientData$age # dataFrame$colName $符号，用于选取给定数据框中的某个特定变量
+    # 生成age和status的关系列表
+    table(patientData$age, patientData$status)
+
+    # attach()和detach()
+    # attach()可以将数据框添加到R搜索路径中
+    attach(airquality)
+    plot(Temp, Ozone)
+    plot(Month, Temp) 
+    # detach()将数据框从搜索路径中移除，但其并不会对数据框本身作处理
+    detach()
+    # 但是当全局中有一个和数据集同样变量名的对象时，全局对象取得优先权
+    Month <- c(5, 6, 7)
+    attach(airquality)
+    plot(Month, Temp) 
+    detach()
+
+    # with()
+    # 无需担心变量名有冲突
+    with(airquality, plot(Month, Wind))
+    # 多条语句，使用{}
+    with(airquality, {
+      summary(airquality)
+      plot(Month, Ozone)
+    })
+    # 赋值仅在函数的括号内有效
+    with(airquality, {
+      month <- airquality$Month
+    })
+    month # Error: object 'month' not found
+    # 使用<<-赋值，可以在全局中使用
+    with(airquality, {
+      temp <<- airquality$Temp
+    })
+```
+  - 因子（factor）   
+    - 变量可归结为名义型、有序型、连续型   
+    - 名义型是没有顺序之分的，比如糖尿病diabetes的Type1和Type2   
+    - 有序型表示一种顺序关系，而非数量关系，比如病情status（poor，improved，excellent）   
+    - 连续型可呈现为某个范围内的任意值，并同时表示了顺序和数量，比如年龄age，可以取21～76.3之间的任意值   
+``` R
+    patientID <- c(1001, 1002, 1003, 1004, 1005)
+    age <- c(21, 32, 43, 54, 65)
+    # 类别（名义型）变量和有序类别（有序型）变量称为因子（factor）
+    diabetes <- c("Type1", "Type2", "Type1", "Type1", "Type2")
+    diabetes <- factor(diabetes)
+    # 因子的水平默认依字母顺序创建
+    status <- c("Ailing", "Excellent", "Improved", "Poor", "Excellent")
+    # 表示有序型变量，需要指定参数ordered = TRUE
+    status <- factor(status, ordered = TRUE) # 返回的顺序为Ailing < Excellent < Improved < Poor，不合理
+    # 通过指定levels ＝ 覆盖默认的排序
+    status <- factor(status, ordered = TRUE, levels = c("Ailing", "Poor", "Improved", "Excellent"))
+    # factor()以一个integer向量的形式存储类别值
+    class(unclass(status))
+    patientData <- data.frame(patientID, age, diabetes, status, row.names = patientID)
+    str(patientData)
+    summary(patientData)
+```
 
 ## 3.R的绘图系统  
 **3.0 基本绘图系统（Base Plotting System）**  
