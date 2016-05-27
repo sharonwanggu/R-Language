@@ -8,6 +8,9 @@
 3.2 package在github上：install_github("package name")  
 3.3 更新package：update.packages()  
 3.4 查看已安装package的描述：installed.packages()  
+
+## 4.R Resources  
+4.1 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)
   
 # R Data Analysis
 ## 1.数据分析流程
