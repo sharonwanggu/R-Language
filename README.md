@@ -3,8 +3,8 @@
 0.1 [R](https://cran.r-project.org)  
 0.2 [IDE RStudio](https://www.rstudio.com/products/rstudio/download/)   
 0.3 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)  
-0.4 [来自Google的R语言编码风格指南](https://github.com/samtse18/R-Language/blob/master/resources/来自%20Google的R语言编码风格指南.pdf)  
-0.5 [R数据的导入和导出 version 2.2.1 （中文版）](http://mcm.dept.ccut.edu.cn/u_newsfiles/1283049677/20120320/20120320065633313331.pdf) / [R数据的导入和导出 version 3.3.0 （英文版）](https://cran.r-project.org/doc/manuals/R-data.pdf)
+0.4 [来自Google的R语言编码风格指南](https://github.com/samtse18/R-Language/blob/master/resources/pdf/来自%20Google的R语言编码风格指南.pdf)  
+0.5 [R数据的导入和导出 version 2.2.1 （中文版）](https://github.com/samtse18/R-Language/blob/master/resources/pdf/R数据的导入和导出（Chinese）.pdf) / [R数据的导入和导出 version 3.3.0 （英文版）](https://cran.r-project.org/doc/manuals/R-data.pdf)
 
 ## 1.在RStudio中操作package:
 1.1 package在cran上：install.packages("package name")，注意保留引号  
@@ -104,11 +104,11 @@
           mfcol（把当前画板分成几行几列，并且按照列的方式填充）  
           这些参数可以在每次plot前修改  
       - hist()（柱状图）  
-      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-hist.png)
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/R-hist.png)
       - boxplot()（箱图）  
-      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-boxplot.png)
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/R-boxplot.png)
       - points()（点图）  
-      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-points.png)
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/R-points.png)
       - lines()（线图）  
       - text()（在图表指定位置添加文字）  
       - title()（给图表命名）  
@@ -164,11 +164,11 @@
   - RColorBrewer包  
     - 三类调色板  
       - sequential：从一个极端到另一个极端慢慢过渡，适合呈现顺序数据  
-      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/RColorBrewer-Sequential.png)
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/RColorBrewer-Sequential.png)
       - diverging：两级取值颜色比较明显，适合呈现处于极端的数据  
-      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/RColorBrewer-Diverging.png)
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/RColorBrewer-Diverging.png)
       - qualitative：于前两类调色板对比，不存在特别淡的颜色，颜色之间的对比较鲜明，适合呈现分类变量之间的差异和对比
-      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/RColorBrewer-Qualitative.png)
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/RColorBrewer-Qualitative.png)
     - 调色板信息可与colorRamp／colorRampPalette结合使用  
 
 **3.4 R支持的图形设备**  
@@ -230,18 +230,18 @@
     - 不需要过分注重图是否漂亮  
   - 分析性作图的六大原则  
     - 凸显比较（谁和谁比）  
-    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-Plotting-Prin1.png)
+    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/R-Plotting-Prin1.png)
     - 凸显机制（因果／机制／解释）  
-    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-Plotting-Prin2.png)
+    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/R-Plotting-Prin2.png)
     - 凸显多元性（>2个变量、逃离扁平）  
-    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-Plotting-Prin3.png)
+    ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/R-Plotting-Prin3.png)
     - 整合证据  
       - 整合文字、数字、图、表等  
       - 用多种方式显示数据的特征  
       - 不要让工具主宰分析  
     - 使用适当的图标、尺度等  
       - 完备性、一图胜前言  
-      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/R-Plotting-Prin5.png)
+      ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/R-Plotting-Prin5.png)
     - 内容是王道  
       - 研究问题的重要性 > 作图漂亮  
   - 获取帮助  
