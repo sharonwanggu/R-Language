@@ -175,7 +175,7 @@
     status <- c("Ailing", "Excellent", "Improved", "Poor", "Excellent")
     # 表示有序型变量，需要指定参数ordered = TRUE
     status <- factor(status, ordered = TRUE) # 返回的顺序为Ailing < Excellent < Improved < Poor，不合理
-    # 通过指定levels ＝ 覆盖默认的排序
+    # 通过指定参数levels覆盖默认的排序
     status <- factor(status, ordered = TRUE, levels = c("Ailing", "Poor", "Improved", "Excellent"))
     # factor()以一个integer向量的形式存储类别值
     class(unclass(status))
