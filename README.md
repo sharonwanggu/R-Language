@@ -5,7 +5,7 @@
 1.3 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)  
 
 ## 2.在RStudio中操作package:
-2.1 package在cran上：在console中输入install.packages("package name")，注意保留引号  
+2.1 package在cran上：install.packages("package name")，注意保留引号  
 2.2 package在github上：install_github("package name")  
 2.3 更新package：update.packages()  
 2.4 查看已安装package的描述：installed.packages()  
