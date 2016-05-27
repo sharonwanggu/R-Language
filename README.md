@@ -6,10 +6,10 @@
 ## 3.下载 [R packages](https://cran.r-project.org)
 
 ## 4.在RStudio中操作package:
-4.1 package在cran上：在console中输入install.packages("package name")，注意保留引号
-4.2 package在github上：install_github("package name")
-4.3 更新package：update.packages()
-4.4 查看已安装package的描述：installed.packages()
+4.1 package在cran上：在console中输入install.packages("package name")，注意保留引号  
+4.2 package在github上：install_github("package name")  
+4.3 更新package：update.packages()  
+4.4 查看已安装package的描述：installed.packages()  
   
 # R Data Analysis
 ## 1.数据分析流程
