@@ -4,7 +4,7 @@
 0.2 [IDE RStudio](https://www.rstudio.com/products/rstudio/download/)   
 0.3 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)  
 0.4 [来自Google的R语言编码风格指南](https://github.com/samtse18/R-Language/blob/master/resources/来自%20Google的R语言编码风格指南.pdf)  
-0.5 [R数据的导入和导出](http://mcm.dept.ccut.edu.cn/u_newsfiles/1283049677/20120320/20120320065633313331.pdf)
+0.5 [R数据的导入和导出 version 2.2.1 （中文版）](http://mcm.dept.ccut.edu.cn/u_newsfiles/1283049677/20120320/20120320065633313331.pdf) / [R数据的导入和导出 version 3.3.0 （英文版）](https://cran.r-project.org/doc/manuals/R-data.pdf)
 
 ## 1.在RStudio中操作package:
 1.1 package在cran上：install.packages("package name")，注意保留引号  
