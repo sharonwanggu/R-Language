@@ -1,16 +1,14 @@
-# R Tutor
-## 1.下载[R](https://cran.r-project.org)
+# R Tutor  
+## 1.R Resources  
+1.1 下载[R](https://cran.r-project.org)
+1.2.下载[IDE RStudio](https://www.rstudio.com/products/rstudio/download/)  
+1.3 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)  
 
-## 2.下载[IDE RStudio](https://www.rstudio.com/products/rstudio/download/)
-
-## 3.在RStudio中操作package:
-3.1 package在cran上：在console中输入install.packages("package name")，注意保留引号  
-3.2 package在github上：install_github("package name")  
-3.3 更新package：update.packages()  
-3.4 查看已安装package的描述：installed.packages()  
-
-## 4.R Resources  
-4.1 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)
+## 2.在RStudio中操作package:
+2.1 package在cran上：在console中输入install.packages("package name")，注意保留引号  
+2.2 package在github上：install_github("package name")  
+2.3 更新package：update.packages()  
+2.4 查看已安装package的描述：installed.packages()  
   
 # R Data Analysis
 ## 1.数据分析流程
