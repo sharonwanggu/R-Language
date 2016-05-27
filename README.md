@@ -1,32 +1,37 @@
 # R Tutor  
-## 1.R Resources  
-1.1 [R](https://cran.r-project.org)  
-1.2 [IDE RStudio](https://www.rstudio.com/products/rstudio/download/)   
-1.3 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)  
+## 0.R Resources  
+0.1 [R](https://cran.r-project.org)  
+0.2 [IDE RStudio](https://www.rstudio.com/products/rstudio/download/)   
+0.3 [Introduction to R 中文版（R导论）](https://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf)  
 
-## 2.在RStudio中操作package:
-2.1 package在cran上：install.packages("package name")，注意保留引号  
-2.2 package在github上：install_github("package name")  
-2.3 更新package：update.packages()  
-2.4 查看已安装package的描述：installed.packages()  
+## 1.在RStudio中操作package:
+1.1 package在cran上：install.packages("package name")，注意保留引号  
+1.2 package在github上：install_github("package name")  
+1.3 更新package：update.packages()  
+1.4 查看已安装package的描述：installed.packages()  
   
 # R Data Analysis
-## 1.数据分析流程
-1.1 定义探究问题  
-1.2 第一理想的数据集  
-1.3 确定能够获取的数据  
-1.4 获取数据  
-1.5 整理数据  
-1.6 探索性分析（数据可视化）  
-1.7 统计分析／建模（机器学习）  
-1.8 解析／交流结果（数据可视化）  
-1.9 挑战结果（有没有其他的可能性？）  
-1.10 书写报告（Reproducible原则）
+## 0.数据分析流程
+0.1 定义探究问题  
+0.2 第一理想的数据集  
+0.3 确定能够获取的数据  
+0.4 获取数据  
+0.5 整理数据  
+0.6 探索性分析（数据可视化）  
+0.7 统计分析／建模（机器学习）  
+0.8 解析／交流结果（数据可视化）  
+0.9 挑战结果（有没有其他的可能性？）  
+0.10 书写报告（Reproducible原则）
 
-## 2.数据基础
-观测（observation）、变量（variable）、数据矩阵（data matrix）  
-数据矩阵的每一行：一次观测  
-数据矩阵的每一列：一个变量
+## 2.数据基础  
+**2.0 数据集的概念**  
+数据集通常是由数据构成的一个矩形数组，不同行业对行／列的名称不同
+
+|           行业           |        行          |        列        |
+| :-----------             | :----------        | :----------      |
+| 统计学家                 | 观测（observation）| 变量（variable） |  
+| 数据库分析师             | 记录（record）     | 字段（field）    | 
+| 数据挖掘／机器学习研究者 | 示例（example）    | 属性（attribute）| 
 
 **2.1 变量类型：**  
   - 数值（quantitative） 可以进行加减乘除求平均等运算  
@@ -76,7 +81,7 @@
       - 并排箱图（side-by-side box plot）
 
 ## 3.R的绘图系统  
-**3.1 基本绘图系统（Base Plotting System）**  
+**3.0 基本绘图系统（Base Plotting System）**  
   - 绘图函数（graphics包）  
       - plot()  
           plot(x轴的变量, y轴的变量, ...)  
@@ -108,7 +113,7 @@
       - axis()（添加坐标轴）  
       - 调用函数会启用一个图形设备（如果没有正在运行的图形设备），并在设备上绘图  
 
-**3.2 Lattice绘图系统（Lattice Plotting System）**  
+**3.1 Lattice绘图系统（Lattice Plotting System）**  
   - 绘图函数  
       - lattice包  
           - xyplot()，适合画散点图  
@@ -130,7 +135,7 @@
       - 打印函数真正执行了在设备上绘图  
       - 命令执行时，trellis类对象会被自动打印，所以看起来就像是lattice函数直接完成了绘图  
 
-**3.3 ggplot2绘图系统（ggplot2 Plotting System）**  
+**3.2 ggplot2绘图系统（ggplot2 Plotting System）**  
   - 层（Layer）  
 
 | Layer                       | Description                                                                      |
@@ -150,7 +155,7 @@
           - 是核心，可以实现qplot()无法实现的功能  
           - 调用ggplot()本身并不能实现绘图，要在其基础上添加层（如gem_point()）才可以
 
-**3.4 R语言绘图之颜色**  
+**3.3 R语言绘图之颜色**  
   - grDevices包  
     - colorRamp() & colorRampPalette()  
     - 颜色的名字可使用colors()获取
@@ -164,7 +169,7 @@
       ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/RColorBrewer-Qualitative.png)
     - 调色板信息可与colorRamp／colorRampPalette结合使用  
 
-**3.5 R支持的图形设备**  
+**3.4 R支持的图形设备**  
   - 什么是图形设备  
     - 屏幕设备（探索性分析常用）：电脑屏幕  
       - windows() on Windows  
@@ -214,7 +219,7 @@
     - 是否需要动态调整图的大小（向量格式 vs. 位图 ）
     - 用哪个绘图系统（Base／Lattice／ggplot2 ？）一般三者不混用
 
-**3.6 探索性数据分析**  
+**3.5 探索性数据分析**  
   - 目的  
     - 了解数据特征、找到数据中的模式、形成分析策略  
     - 图与数字互相验证、帮助发现错误、用于交流结果  
