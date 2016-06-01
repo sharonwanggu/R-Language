@@ -173,7 +173,15 @@
 ```
 
 ## 1.图形初阶
-
+**1.1 使用图形**
+  - 绘制一个简单的散点图  
+``` R
+    attach(mtcars) # 绑定数据框mtcars
+    plot(wt, mpg) # 打开一个图形窗口并生成一副散点图，x轴表车身重量，y轴表每加仑汽油行驶的英里数
+    abline(lm(mpg ~ wt)) # 添加一条回归线
+    title("Regression og MPG on Weight") # 设置标题
+    detach(mtcars) # 数据框解除绑定
+```
 
 ## 2.R的绘图系统  
 **2.1 基本绘图系统（Base Plotting System）**  
