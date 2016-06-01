@@ -182,6 +182,7 @@
     title("Regression og MPG on Weight") # 设置标题
     detach(mtcars) # 数据框解除绑定
 ```
+  ![alt tag](https://github.com/samtse18/R-Language/blob/master/R%20in%20Action/images/R%20-%20Regression%20og%20MPG%20on%20Weight.png)
 
 ## 2.R的绘图系统  
 **2.1 基本绘图系统（Base Plotting System）**  
