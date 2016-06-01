@@ -13,8 +13,8 @@
 1.4 查看已安装package的描述：installed.packages()  
   
 # R Introduction
-## 1.数据基础  
-**1.0 数据集的概念**  
+## 0.数据基础  
+**0.1 数据集的概念**  
 数据集通常是由数据构成的一个矩形数组，不同行业对行／列的名称不同
 
 |           行业           |        行          |        列        |
@@ -33,7 +33,7 @@
 |  1004                   |  10/13/2016           |  54           |  Type1                   |  Improved        |  
 |  1005                   |  10/14/2016           |  65           |  Type2                   |  Poor            |
 
-**1.1 数据结构**  
+**0.2 数据结构**  
   - 向量（vector）  
     - 向量是一个一维数组，用于存储数值型、字符型或逻辑型数据  
     - 单个向量中的数据必须拥有相同的类型  
@@ -172,11 +172,11 @@
     summary(patientData)
 ```
 
-## 2.图形初阶
+## 1.图形初阶
 
 
-## 3.R的绘图系统  
-**3.0 基本绘图系统（Base Plotting System）**  
+## 2.R的绘图系统  
+**2.1 基本绘图系统（Base Plotting System）**  
   - 绘图函数（graphics包）  
       - plot()  
           plot(x轴的变量, y轴的变量, ...)  
@@ -208,7 +208,7 @@
       - axis()（添加坐标轴）  
       - 调用函数会启用一个图形设备（如果没有正在运行的图形设备），并在设备上绘图  
 
-**3.1 Lattice绘图系统（Lattice Plotting System）**  
+**2.2 Lattice绘图系统（Lattice Plotting System）**  
   - 绘图函数  
       - lattice包  
           - xyplot()，适合画散点图  
@@ -230,7 +230,7 @@
       - 打印函数真正执行了在设备上绘图  
       - 命令执行时，trellis类对象会被自动打印，所以看起来就像是lattice函数直接完成了绘图  
 
-**3.2 ggplot2绘图系统（ggplot2 Plotting System）**  
+**2.3 ggplot2绘图系统（ggplot2 Plotting System）**  
   - 层（Layer）  
 
 | Layer                       | Description                                                                      |
@@ -250,7 +250,7 @@
           - 是核心，可以实现qplot()无法实现的功能  
           - 调用ggplot()本身并不能实现绘图，要在其基础上添加层（如gem_point()）才可以
 
-**3.3 R语言绘图之颜色**  
+**2.4 R语言绘图之颜色**  
   - grDevices包  
     - colorRamp() & colorRampPalette()  
     - 颜色的名字可使用colors()获取
@@ -264,7 +264,7 @@
       ![alt tag](https://github.com/samtse18/R-Language/blob/master/resources/plotting%20image/RColorBrewer-Qualitative.png)
     - 调色板信息可与colorRamp／colorRampPalette结合使用  
 
-**3.4 R支持的图形设备**  
+**2.5 R支持的图形设备**  
   - 什么是图形设备  
     - 屏幕设备（探索性分析常用）：电脑屏幕  
       - windows() on Windows  
@@ -314,7 +314,7 @@
     - 是否需要动态调整图的大小（向量格式 vs. 位图 ）
     - 用哪个绘图系统（Base／Lattice／ggplot2 ？）一般三者不混用
 
-**3.5 探索性数据分析**  
+**2.6 探索性数据分析**  
   - 目的  
     - 了解数据特征、找到数据中的模式、形成分析策略  
     - 图与数字互相验证、帮助发现错误、用于交流结果  
