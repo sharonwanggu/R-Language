@@ -182,7 +182,26 @@
     title("Regression og MPG on Weight") # 设置标题
     detach(mtcars) # 数据框解除绑定
 ```
-  ![alt tag](https://github.com/samtse18/R-Language/blob/master/R%20in%20Action/images/R%20-%20Regression%20og%20MPG%20on%20Weight.png)
+  ![alt tag](https://github.com/samtse18/R-Language/blob/master/R%20in%20Action/images/R%20-%20Regression%20og%20MPG%20on%20Weight.png)  
+
+**1.2 图形参数**    
+  - 通过修改图形参数的选项来自定义图形的特征（字体、颜色、标题......），有以下两种方法      
+    - par()    
+      - 通过函数par(）设定的参数值，除非被再次修改，否则将会在会话结束前一直有效    
+      - 调用格式为par(optionname1 = value1, optionname2 = value2, ......)    
+      - 不加参数的执行par()，将返回一个含有当前图形参数设置的列表    
+      - 添加no.readonly = TRUE，返回一个可以修改的图形参数列表     
+``` R
+    opar <- par(no.readonly = TRUE) # 返回一个可以修改的图形参数列表
+    par(lty = 2, pch = 20) # 线条类型改为虚线，点符号改为实心圆点
+    plot(dose, drugA, type = "b")
+    par(opar) # 应用图形设置
+```   
+    - 为高级绘图函数直接提供optionname = value键值对   
+      - 指定的选项只对该图有效   
+``` R
+    plot(dose, drugB, type = "b", lty = 2, pch = 18)
+```
 
 ## 2.R的绘图系统  
 **2.1 基本绘图系统（Base Plotting System）**  
