@@ -191,17 +191,17 @@
       - 调用格式为par(optionname1 = value1, optionname2 = value2, ......)    
       - 不加参数的执行par()，将返回一个含有当前图形参数设置的列表    
       - 添加no.readonly = TRUE，返回一个可以修改的图形参数列表     
-``` R
-    opar <- par(no.readonly = TRUE) # 返回一个可以修改的图形参数列表
-    par(lty = 2, pch = 20) # 线条类型改为虚线，点符号改为实心圆点
-    plot(dose, drugA, type = "b")
-    par(opar) # 应用图形设置
-```   
+    ``` R
+        opar <- par(no.readonly = TRUE) # 返回一个可以修改的图形参数列表
+        par(lty = 2, pch = 20) # 线条类型改为虚线，点符号改为实心圆点
+        plot(dose, drugA, type = "b")
+        par(opar) # 应用图形设置
+    ```
     - 为高级绘图函数直接提供optionname = value键值对   
       - 指定的选项只对该图有效   
-``` R
-    plot(dose, drugB, type = "b", lty = 2, pch = 18)
-```
+    ``` R
+        plot(dose, drugB, type = "b", lty = 2, pch = 18)
+    ```
 
 ## 2.R的绘图系统  
 **2.1 基本绘图系统（Base Plotting System）**  
