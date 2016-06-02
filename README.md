@@ -267,7 +267,11 @@
               sub     = "sub title",  col.sub  = "green",
               xlab    = "x label",    ylab     = "y label",
               col.lab = "blue",       cex.lab  = .75) # 红色主标题，绿色副标题，蓝色和默认文字大小75%的坐标轴标签
-    ```  
+    ```   
+  - 坐标轴
+    - 使用axis()函数来创建自定义坐标轴
+    ``` R
+        
 ## 2.R的绘图系统  
 **2.1 基本绘图系统（Base Plotting System）**  
   - 绘图函数（graphics包）  
