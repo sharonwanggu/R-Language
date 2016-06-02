@@ -241,7 +241,33 @@
   | pin           | 以英寸表示的图形尺寸（宽和高）                               |    
   | mai           | 以数值向量表现的边界大小，顺序为“下、左、上、右”，单位为英寸 |   
   | mar           | 以数值向量表现的边界大小，顺序为“下、左、上、右”，单位为英分 |  
+  - 示例
+``` R 
+  dose <- c(20, 30, 40, 45, 60)
+  drugA <- c(16, 20, 27, 40, 60)
+  drugB <- c(15, 18, 25, 31, 40)
+  opar <- par(no.readonly = TRUE)
+  par(pin = c(2, 3)) # 生成2英寸宽，3英寸高的图形
+  par(lwd = 2, cex = 1.5) # 线条宽度为默认的2倍，符号大小为默认的1.5倍
+  par(cex.axis = .75, font.axis = 3) # 坐标轴刻度文本为默认的0.75倍，样式为斜体
+  plot(dose, drugA, type = "b", pch = 19, lty = 2, col = "red") # 红色实心圆圈和虚线
+  plot(dose, drugB, type = "b", pch = 23, lty = 6, col = "green", bg = "red") # 红色填充的红色菱形加绿色边框和绿色的虚线
+  par(opar)
+```
 
+**1.3 添加文本、自定义坐标轴和图例**      
+  - 标题
+    - 使用title()函数为图形添加标题和坐标轴标签
+    ``` R 
+        title(main = "main title", sub = "sub title", xlab = "x label", ylab = "y label")
+    ```
+    - title()亦可指定其他图形参数（文本大小、字体、颜色等）  
+    ``` R
+        title(main = "main title", col.main = "red",
+              sub = "sub title", col.sub = "green",
+              xlab = "x label", ylab = "y label",
+              col.lab = "blue", cex.lab = .75) # 红色主标题，绿色副标题，蓝色和默认文字大小75%的坐标轴标签
+    ```  
 ## 2.R的绘图系统  
 **2.1 基本绘图系统（Base Plotting System）**  
   - 绘图函数（graphics包）  
